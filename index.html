@@ -89,6 +89,15 @@ section{padding:72px 0;border-top:1px solid var(--line)}
 /* ---------- projects ---------- */
 .projects{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 @media(max-width:760px){.projects{grid-template-columns:1fr}}
+.project-groups{display:flex;flex-direction:column;gap:28px}
+.project-lane{display:grid;grid-template-columns:minmax(150px,220px) 1fr;gap:24px;align-items:stretch}
+.project-lane+.project-lane{border-top:1px solid var(--line);padding-top:28px}
+.project-lane-head{padding-top:8px}
+.project-lane-head .kicker{font-family:var(--mono);font-size:12px;color:var(--cobalt);letter-spacing:.14em;text-transform:uppercase}
+.project-lane-head h3{font-family:var(--serif);font-size:22px;line-height:1.35;margin:6px 0 8px}
+.project-lane-head p{font-size:14px;color:var(--ink-soft)}
+.project-lane .projects{grid-template-columns:1fr}
+@media(max-width:760px){.project-lane{grid-template-columns:1fr;gap:14px}.project-lane-head{padding-top:0}}
 .proj{background:var(--ink);color:#E9EEF8;border-radius:10px;padding:32px;display:flex;flex-direction:column}
 .proj .wave-era{color:#8FB0FF}
 .proj h3{font-family:var(--serif);font-size:21px;font-weight:800;margin:8px 0 12px;color:#fff}
@@ -134,7 +143,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
     <div class="nav-links">
       <a href="#exp">工作经历</a>
       <a href="#proj">重点项目</a>
-      <a href="#project">独立项目</a>
+      <a href="#project">项目实践</a>
       <a href="#skills">专业技能</a>
       <a href="#waves">技术轨迹</a>
       <a href="#blog">文章</a>
@@ -248,28 +257,55 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
 
 <section id="project">
   <div class="wrap">
-    <div class="sec-head"><span class="tag">03_INDEPENDENT</span><h2>独立项目</h2></div>
-    <div class="projects">
-      <div class="proj reveal">
-        <div class="wave-era">2026 · Product / Landing Page</div>
-        <h3>IMAgent</h3>
-        <p>企业 IM 原生的本地 Agent 工作台，让 Agent 像联系人一样进入飞书等会话，围绕本机文件、项目目录、多轮上下文和任务状态推进真实工作流。</p>
-        <div class="proj-metric">企业 IM Agent · 本地优先工作流</div>
-        <a class="proj-link" href="https://imagent.vercel.app/" target="_blank" rel="noopener">访问项目 →</a>
+    <div class="sec-head"><span class="tag">03_PRACTICE</span><h2>项目实践</h2></div>
+    <div class="project-groups">
+      <div class="project-lane reveal">
+        <div class="project-lane-head">
+          <div class="kicker">Independent Project</div>
+          <h3>独立项目</h3>
+          <p>从产品定位、信息架构到线上落地的个人 Agent 工作台实践。</p>
+        </div>
+        <div class="projects">
+          <div class="proj">
+            <div class="wave-era">2026 · Product / Landing Page</div>
+            <h3>IMAgent</h3>
+            <p>企业 IM 原生的本地 Agent 工作台，让 Agent 像联系人一样进入飞书等会话，围绕本机文件、项目目录、多轮上下文和任务状态推进真实工作流。</p>
+            <div class="proj-metric">企业 IM Agent · 本地优先工作流</div>
+            <a class="proj-link" href="https://imagent.vercel.app/" target="_blank" rel="noopener">访问项目 →</a>
+          </div>
+        </div>
       </div>
-      <div class="proj reveal">
-        <div class="wave-era">2025 · 首任产品经理</div>
-        <h3>办公问屏智能体</h3>
-        <p>面向办公场景的多模态问屏 Agent，连接屏幕理解、知识问答与办公效率工具，负责从产品定义、交互流程到落地验证的首版设计。</p>
-        <div class="proj-metric">多模态 Agent · 办公效率场景</div>
-        <a class="proj-link" href="https://allspark.xiaoice.cn/ask" target="_blank" rel="noopener">访问产品 →</a>
+      <div class="project-lane reveal">
+        <div class="project-lane-head">
+          <div class="kicker">To C Product</div>
+          <h3>To C 产品</h3>
+          <p>面向真实用户场景的多模态 Agent 产品探索。</p>
+        </div>
+        <div class="projects">
+          <div class="proj">
+            <div class="wave-era">2025 · 首任产品经理</div>
+            <h3>办公问屏智能体</h3>
+            <p>面向办公场景的多模态问屏 Agent，连接屏幕理解、知识问答与办公效率工具，负责从产品定义、交互流程到落地验证的首版设计。</p>
+            <div class="proj-metric">多模态 Agent · 办公效率场景</div>
+            <a class="proj-link" href="https://allspark.xiaoice.cn/ask" target="_blank" rel="noopener">访问产品 →</a>
+          </div>
+        </div>
       </div>
-      <div class="proj reveal">
-        <div class="wave-era">2024 · Open Source</div>
-        <h3>图像融合边缘抑绿算法 AGED</h3>
-        <p>面向虚拟人视频生产中的边缘绿边问题，开源图像融合边缘抑绿算法实现，用更轻量的工程方案提升后期处理效率。</p>
-        <div class="proj-metric">GitHub 开源 · 时耗比达外采算法 60 倍</div>
-        <a class="proj-link" href="https://github.com/vip-gong/aged-despill" target="_blank" rel="noopener">查看项目 →</a>
+      <div class="project-lane reveal">
+        <div class="project-lane-head">
+          <div class="kicker">Open Source</div>
+          <h3>开源贡献</h3>
+          <p>把生产问题沉淀为可复用的工程方案，补足算法产品化链路。</p>
+        </div>
+        <div class="projects">
+          <div class="proj">
+            <div class="wave-era">2024 · Open Source</div>
+            <h3>图像融合边缘抑绿算法 AGED</h3>
+            <p>面向虚拟人视频生产中的边缘绿边问题，开源图像融合边缘抑绿算法实现，用更轻量的工程方案提升后期处理效率。</p>
+            <div class="proj-metric">GitHub 开源 · 时耗比达外采算法 60 倍</div>
+            <a class="proj-link" href="https://github.com/vip-gong/aged-despill" target="_blank" rel="noopener">查看项目 →</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
