@@ -32,7 +32,7 @@ a:hover{text-decoration:underline}
 nav{position:sticky;top:0;z-index:50;background:rgba(247,249,252,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
 .nav-name{font-family:var(--serif);font-weight:800;font-size:18px;letter-spacing:.04em}
-.nav-links{display:flex;gap:28px;font-size:14px}
+.nav-links{display:flex;gap:24px;font-size:14px}
 .nav-links a{color:var(--ink-soft)}
 .nav-links a:hover{color:var(--cobalt);text-decoration:none}
 @media(max-width:640px){.nav-links{display:none}}
@@ -103,9 +103,15 @@ section{padding:72px 0;border-top:1px solid var(--line)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13.5px;color:var(--ink-soft)}
 
-/* ---------- writing / footer ---------- */
-.pub{display:flex;gap:14px;align-items:baseline;margin-bottom:10px;font-size:15px}
-.pub .dot{color:var(--signal)}
+/* ---------- blog / footer ---------- */
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:760px){.blog-grid{grid-template-columns:1fr}}
+.blog-card{display:flex;flex-direction:column;min-height:220px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:24px;transition:box-shadow .25s,border-color .25s,transform .25s}
+.blog-card:hover{border-color:#C3CFE6;box-shadow:0 8px 28px rgba(22,36,61,.07);transform:translateY(-2px);text-decoration:none}
+.blog-meta{display:flex;flex-wrap:wrap;gap:8px;font-family:var(--mono);font-size:12px;color:var(--cobalt);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.blog-card h3{font-size:18px;line-height:1.45;color:var(--ink);margin-bottom:10px}
+.blog-card p{font-size:14.5px;color:var(--ink-soft);flex:1}
+.blog-link{font-family:var(--mono);font-size:13px;color:var(--signal);margin-top:18px}
 footer{border-top:1px solid var(--line);padding:64px 0 80px}
 .contact{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
 .contact a,.contact span{font-family:var(--mono);font-size:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 18px;color:var(--ink)}
@@ -128,6 +134,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
       <a href="#exp">工作经历</a>
       <a href="#proj">重点项目</a>
       <a href="#skills">专业技能</a>
+      <a href="#blog">Blog</a>
       <a href="#contact">联系我</a>
     </div>
   </div>
@@ -283,16 +290,44 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
       <div class="skill-row reveal"><div class="k">数据与工程</div><div class="chips"><span class="chip">FFmpeg 音视频编解码</span><span class="chip">Python / SQL 数据分析</span><span class="chip">Cursor / Claude Code</span><span class="chip">模型评测体系构建</span></div></div>
       <div class="skill-row reveal"><div class="k">设计工具</div><div class="chips"><span class="chip">Figma</span><span class="chip">Axure</span><span class="chip">Xmind</span><span class="chip">Photoshop</span><span class="chip">剪映</span></div></div>
     </div>
-    <div style="margin-top:48px">
-      <div class="pub reveal"><span class="dot">●</span><span>撰写<a href="https://kcnrgc2yrax7.feishu.cn/docx/AJo5dVRS7ortyEx1OW8cX9KBngd?from=from_copylink" target="_blank" rel="noopener">《DeepSeek 认知之旅》</a>算法解读文章，获 6000+ 专业人士阅读</span></div>
-      <div class="pub reveal"><span class="dot">●</span><span>开源<a href="https://github.com/vip-gong/aged-despill" target="_blank" rel="noopener">图像融合边缘抑绿算法 AGED</a>，时耗比达外采算法的 60 倍</span></div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="wrap">
+    <div class="sec-head"><span class="tag">05_BLOG</span><h2>文章与开源</h2></div>
+    <div class="blog-grid">
+      <a class="blog-card reveal" href="https://blog.csdn.net/suiyuexiwuhen/article/details/161052657" target="_blank" rel="noopener">
+        <div class="blog-meta"><span>CSDN</span><span>2026.05</span></div>
+        <h3>一次 AI IDE Timeout 的完整排查：问题最终出在 Windows Time Service</h3>
+        <p>复盘新电脑搭建 AI Coding 环境时的系统级排查：从代理、DNS、Electron 沙箱一路定位到 Windows 时间服务异常。</p>
+        <span class="blog-link">阅读原文 →</span>
+      </a>
+      <a class="blog-card reveal" href="https://blog.csdn.net/suiyuexiwuhen/article/details/161836857?spm=1001.2014.3001.5502" target="_blank" rel="noopener">
+        <div class="blog-meta"><span>CSDN</span><span>技术文章</span></div>
+        <h3>CSDN 原创技术文章</h3>
+        <p>CSDN 原创文章入口，保留原文链接，便于读者跳转查看完整内容。</p>
+        <span class="blog-link">阅读原文 →</span>
+      </a>
+      <a class="blog-card reveal" href="https://kcnrgc2yrax7.feishu.cn/docx/AJo5dVRS7ortyEx1OW8cX9KBngd?from=from_copylink" target="_blank" rel="noopener">
+        <div class="blog-meta"><span>Feishu</span><span>6000+ 阅读</span></div>
+        <h3>DeepSeek 认知之旅</h3>
+        <p>面向产品和技术读者的 DeepSeek 算法解读，拆解模型能力、技术路径与产品应用之间的关系。</p>
+        <span class="blog-link">阅读原文 →</span>
+      </a>
+      <a class="blog-card reveal" href="https://github.com/vip-gong/aged-despill" target="_blank" rel="noopener">
+        <div class="blog-meta"><span>GitHub</span><span>Open Source</span></div>
+        <h3>图像融合边缘抑绿算法 AGED</h3>
+        <p>开源图像融合边缘抑绿算法实现，面向虚拟人视频生产中的边缘绿边问题，时耗比达外采算法的 60 倍。</p>
+        <span class="blog-link">查看项目 →</span>
+      </a>
     </div>
   </div>
 </section>
 
 <footer id="contact">
   <div class="wrap">
-    <div class="sec-head" style="margin-bottom:8px"><span class="tag">05_CONTACT</span><h2>联系我</h2></div>
+    <div class="sec-head" style="margin-bottom:8px"><span class="tag">06_CONTACT</span><h2>联系我</h2></div>
     <p style="color:var(--ink-soft);max-width:560px">如果你正在寻找一位既懂算法、又懂产品、还能推动工程落地的 AI 产品经理，欢迎随时联系。</p>
     <div class="contact">
       <a href="mailto:vip.gong@foxmail.com">vip.gong@foxmail.com</a>
