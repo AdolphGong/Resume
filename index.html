@@ -114,6 +114,14 @@ section{padding:72px 0;border-top:1px solid var(--line)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13.5px;color:var(--ink-soft)}
 
+/* ---------- education ---------- */
+.edu-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:28px 32px;display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}
+.edu-card h3{font-size:22px;font-weight:700;margin:4px 0}
+.edu-card p{font-size:15px;color:var(--ink-soft)}
+.edu-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.edu-tag{font-family:var(--mono);font-size:13px;color:var(--ink-soft);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+@media(max-width:720px){.edu-card{grid-template-columns:1fr}.edu-tags{justify-content:flex-start}}
+
 /* ---------- blog / footer ---------- */
 .blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 @media(max-width:760px){.blog-grid{grid-template-columns:1fr}}
@@ -145,6 +153,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
       <a href="#proj">重点项目</a>
       <a href="#project">项目实践</a>
       <a href="#skills">专业技能</a>
+      <a href="#education">教育背景</a>
       <a href="#waves">技术轨迹</a>
       <a href="#blog">文章</a>
       <a href="#contact">联系我</a>
@@ -156,7 +165,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
   <div class="wrap">
     <div class="eyebrow">AI Product Manager · Hangzhou, China</div>
     <h1>跟着 AI 的每一次浪潮<br>做产品</h1>
-    <p class="hero-role"><strong>龚桂兵</strong> · 10 年 AI 产品专家 · 哈尔滨工业大学</p>
+    <p class="hero-role"><strong>龚桂兵</strong> · 10 年 AI 产品专家 · LLM / Agent · 模型评测平台 · B 端 AI 平台</p>
     <p class="hero-thesis">从语音、视觉到大模型与 Agent，我经历了 AI 技术栈的每一轮迭代。擅长把模糊的业务需求转化为可落地的算法与工程方案，多次从 0 到 1 构建 AI 平台，用技术直接驱动营收增长与成本优化。</p>
     <div class="stats reveal">
       <div class="stat"><b>10<em>年</em></b><span>AI 产品全栈经验</span></div>
@@ -178,6 +187,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
       <div class="results">
         <div class="result"><b>1 次</b>成功拦截重大模型 Bug，保障数十万客服会话稳定</div>
         <div class="result"><b>+100%</b>运营分析效率提升，打标成本降低 80%</div>
+        <div class="result"><b>+30%</b>任务执行效率与业务接入效率提升</div>
         <div class="result"><b>95%→33%</b>模型「不引用外呼记录」缺陷率压降</div>
         <div class="result"><b>-15%</b>不合理熔断转人工率降低</div>
       </div>
@@ -188,8 +198,10 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
       <div class="job-role">虚拟人超级工厂（模型训练平台）产品架构 / 算法产品化 / 评测体系</div>
       <p class="desc">从 0 到 1 设计「数据-算法-工程」一体化的虚拟人训练中台；构建 19.5 万+ 2D 形象与 20.3 万+ TTS 声音数据集形成数据飞轮；设计图像融合边缘抑绿、Mask 视频质检等算法方案；担任办公问屏智能体首任产品经理。</p>
       <div class="results">
-        <div class="result"><b>亿级</b>支撑虚拟人业务营收，定制服务日均调用 80+ 次</div>
+        <div class="result"><b>亿级</b>支撑虚拟人业务营收，2D 与 TTS 定制日均各 80+ 次</div>
         <div class="result"><b>-75%</b>2D 形象模型训练成本，存储成本降低 80%</div>
+        <div class="result"><b>-50%+</b>TTS 模型训练成本降低</div>
+        <div class="result"><b>+50%</b>LLM 脚本辅助音视频数据处理效率提升</div>
         <div class="result"><b>15%→75%</b>自动化视频抠像合格率</div>
         <div class="result"><b>70%→99%</b>Mask 视频质检准确率</div>
       </div>
@@ -208,9 +220,10 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
     <div class="job reveal">
       <div class="job-top"><h3>极课大数据（被字节收购） <small>· AI 产品经理</small></h3><span class="job-date">2018.03 — 2019.04</span></div>
       <div class="job-role">智能阅卷体系软件产品 / AI-OCR 算法产品化</div>
-      <p class="desc">统筹阅卷大师、极课云印、网阅留痕多条客户端产品线，构建智能阅卷软件矩阵；建立算法效果反馈闭环，客户端异常数据反哺模型训练。</p>
+      <p class="desc">统筹阅卷大师 Android / Windows 客户端、极课云印、网阅留痕与智能硬件管理后台，构建「采集-识别-批改-分析」闭环；建立算法效果反馈闭环，客户端异常数据反哺模型训练。</p>
       <div class="results">
         <div class="result"><b>5 倍+</b>客户端搜索效率提升</div>
+        <div class="result"><b>4 条</b>客户端与硬件后台产品线统一规划</div>
         <div class="result"><b>400+ 台</b>阅卷大师迭代 11 个版本，辅助硬件准时量产</div>
       </div>
     </div>
@@ -323,9 +336,27 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
   </div>
 </section>
 
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head"><span class="tag">05_EDUCATION</span><h2>教育背景</h2></div>
+    <div class="edu-card reveal">
+      <div>
+        <div class="wave-era">2012.09 — 2016.07 · Full-time Bachelor</div>
+        <h3>哈尔滨工业大学</h3>
+        <p>机械设计制造及其自动化 · 学士 · 全日制统招</p>
+      </div>
+      <div class="edu-tags">
+        <span class="edu-tag">工科背景</span>
+        <span class="edu-tag">全日制统招</span>
+        <span class="edu-tag">CET-4</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="waves">
   <div class="wrap">
-    <div class="sec-head"><span class="tag">05_WAVES</span><h2>技术轨迹：六个时代</h2></div>
+    <div class="sec-head"><span class="tag">06_WAVES</span><h2>技术轨迹：六个时代</h2></div>
     <div class="waves">
       <div class="wave reveal">
         <div class="wave-era">2016 — 2017 · ASR / TTS</div>
@@ -363,7 +394,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
 
 <section id="blog">
   <div class="wrap">
-    <div class="sec-head"><span class="tag">06_BLOG</span><h2>文章</h2></div>
+    <div class="sec-head"><span class="tag">07_BLOG</span><h2>文章</h2></div>
     <div class="blog-grid">
       <a class="blog-card reveal" href="https://blog.csdn.net/suiyuexiwuhen/article/details/161836857?spm=1001.2014.3001.5502" target="_blank" rel="noopener">
         <div class="blog-meta"><span>CSDN</span><span>2026.06</span></div>
@@ -395,14 +426,14 @@ footer{border-top:1px solid var(--line);padding:64px 0 80px}
 
 <footer id="contact">
   <div class="wrap">
-    <div class="sec-head" style="margin-bottom:8px"><span class="tag">07_CONTACT</span><h2>联系我</h2></div>
+    <div class="sec-head" style="margin-bottom:8px"><span class="tag">08_CONTACT</span><h2>联系我</h2></div>
     <p style="color:var(--ink-soft);max-width:560px">如果你正在寻找一位既懂算法、又懂产品、还能推动工程落地的 AI 产品经理，欢迎随时联系。</p>
     <div class="contact">
       <a href="mailto:vip.gong@foxmail.com">vip.gong@foxmail.com</a>
       <a href="tel:18301057893">183-0105-7893</a>
       <span>中国杭州 · Hangzhou, China</span>
     </div>
-    <p class="foot-note">© 2026 龚桂兵 · 哈尔滨工业大学 机械设计制造及其自动化 学士</p>
+    <p class="foot-note">© 2026 龚桂兵 · AI Product Manager · Hangzhou, China</p>
   </div>
 </footer>
 
