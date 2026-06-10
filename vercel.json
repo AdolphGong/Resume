@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/Adolph.html"
+      "destination": "/index.html"
     }
   ]
 }
