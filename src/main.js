@@ -37,8 +37,8 @@ const renderHero = ({ profile, stats }) => `
       <div class="hero-stats" aria-label="职业概览">
         ${stats.map((item) => `
           <div class="stat-item">
-            <strong>${escapeHtml(item.n)}</strong>
-            <span>${escapeHtml(item.t)}</span>
+            <strong>${escapeHtml([item.big, item.unit].filter(Boolean).join(''))}</strong>
+            <span>${escapeHtml(item.label)}</span>
           </div>
         `).join('')}
       </div>
